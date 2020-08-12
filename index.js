@@ -114,6 +114,7 @@ function f1 (){
     return item;
 }
 
+
 function f2 () {
     const item = 2;
     return item;
@@ -144,12 +145,13 @@ console.log(multi(3,4));
    
 }*/
 
-//equivale a, usando palabra reservada function
+//equivale a, usando palabra reservada function, solo hay sentencia
 
 const printWattingTime = minutes => `Please, wait ${minutes} minutes`;
     
     console.log(printWattingTime(4));
     
+
 
 
 

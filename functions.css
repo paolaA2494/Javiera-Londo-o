@@ -1,0 +1,7 @@
+.alert{
+    background-color: blue;
+}
+
+.alert:hover{
+    background-color: burlywood;
+}
