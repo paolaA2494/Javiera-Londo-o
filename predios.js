@@ -5,6 +5,11 @@
 let administración = 0;
 let metrosCuadrados = 0;
 let tipoPredio = 0; //Apartamento (0) y casa (1)
+let cuotaAseo = 0;
+let genero = "";
+let edad = 0;
+//suponer que por casa solo un derecho de gimnasio
+let derechoGym = 0;
 
 
 //Zona Proceso
@@ -17,12 +22,22 @@ metrosCuadrados = parseInt(prompt('Ingrese los metros cuadrados'));
 //que pasaremos como parámetros
 
 administración = calcularAdministracion (metrosCuadrados, tipoPredio);
+cuotaAseo = calcularCuotaAseo (administración, metrosCuadrados);
+
+//proceso para solicitar info, sobre la cuota de gym
+genero = prompt('Ingrese el género');
+edad = parseInt(prompt('Ingrese su edad'));
+//invocar la función para el derecho de gym
+
+
 
 //calcular la función
-
 //zona de salida
 alert(`El valor de la admi es ${administración}`);
+alert(`El valor de la cuota de aseo es ${cuotaAseo}`);
 
+
+//ADMINISTRACIÓN
 function calcularAdministracion (MT, T) {
     //BLOQUE DE DECISIÓN SEGUN TIPO DE PREDIO
     if(T === 0 ) {
@@ -35,6 +50,12 @@ function calcularAdministracion (MT, T) {
         return('intentalo de nuevo ERROR');
     }
 
+};
+
+//CUOTA DE ASEO
+
+function calcularCuotaAseo (A, MT){
+    return((A*0.10) + (MT*1000));
 };
 
 
